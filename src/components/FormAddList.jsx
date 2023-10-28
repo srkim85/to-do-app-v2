@@ -1,6 +1,5 @@
 import styles from "./FormAddList.module.scss";
 import Button from "./Button";
-import BackButton from "./BackButton";
 
 import { useEffect, useRef } from "react";
 import { useTasks } from "../contexts/tasksContext";
@@ -49,7 +48,7 @@ function FormAddList() {
         className="input input-new-list"
         ref={inputEl}
       />
-      <Button type="submit">+ Add list</Button>
+      <Button type="add-list">+ Add list</Button>
       <Button type="back" onClick={closeAddListForm}>
         &larr; Close
       </Button>

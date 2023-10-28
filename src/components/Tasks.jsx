@@ -29,23 +29,11 @@ function Tasks() {
             >
               {task.taskName}
             </span>
-            {/* {
-              <ClearIcon
-                onClick={() => handleDeleteTask(task)}
-                style={{ color: "#ff6b6b", fontSize: "2rem" }}
-              />
-            } */}
           </li>
         ))}
       </ul>
 
-      {selectedUserList !== 0 && (
-        // <HighlightOffIcon
-        //   style={{ color: "#ff6b6b", fontSize: "30px" }}
-        //   className="btn-del-list"
-        //   onClick={handleDeleteList}
-        // />
-      )}
+      {selectedUserList !== 0 && (<span onClick={handleDeleteList}>❌</span>)()}
     </div>
   );
 }

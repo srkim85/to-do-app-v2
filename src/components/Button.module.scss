@@ -1,17 +1,20 @@
 .btn {
-  // width: 2rem;
-  // height: 2rem;
   display: inline-block;
   font-family: inherit;
+  white-space: nowrap;
   font-size: inherit;
   color: inherit;
   border: none;
   background: none;
-  background-color: var(--color-primary-light-2);
   border-radius: 8px;
   cursor: pointer;
   padding: 0.8rem 1.2rem;
   transition: all 0.3s;
+}
+
+.new-list {
+  background-color: var(--color-primary-light-2);
+  margin-left: 4rem;
 
   &:hover {
     background-color: var(--color-primary-light-1);
@@ -19,24 +22,35 @@
 }
 
 .add-list {
-  // padding: 0.8rem 1.2rem;
-  white-space: nowrap;
-  margin-left: 4rem;
+  color: #fff;
+  background-color: var(--color-primary-dark-1);
+
+  &:hover {
+    background-color: var(--color-primary-dark-2);
+  }
 }
 
-// .back {
-//   // font-weight: 600;
-//   background: none;
-//   border: 1px solid currentColor;
-//   background-color: var(--color-primary-light-4);
-// }
-
-.submit,
 .back {
   background-color: var(--color-primary-light-4);
-  font-size: 1.6rem;
-  padding: 0.8rem 1.2rem;
-  white-space: nowrap;
+  // font-size: 1.6rem;
+  // padding: 0.8rem 1.2rem;
+
+  &:hover {
+    background-color: var(--color-primary-light-3);
+  }
+}
+
+.new-task {
+  justify-self: center;
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);
+  justify-self: end;
+  background-color: var(--color-primary-light-2);
+
+  &:hover {
+    box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.08);
+    transform: translateY(-0.4rem);
+    background-color: var(--color-primary-light-1);
+  }
 }
 
 .del-list {

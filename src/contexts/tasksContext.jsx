@@ -63,6 +63,11 @@ function TaksProvider({ children }) {
         setShowFormAddTask,
         showFormAddList,
         setShowFormAddList,
+        handleAddTask,
+        handleDeleteTask,
+        handleDeleteList,
+        handleAddList,
+        handleToggleTask,
       }}
     >
       {children}

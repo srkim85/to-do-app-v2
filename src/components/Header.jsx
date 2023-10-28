@@ -2,10 +2,14 @@ import { useTasks } from "../contexts/tasksContext";
 import styles from "./Header.module.scss";
 import UserLists from "./UserLists";
 import FormAddList from "./FormAddList";
-import ButtonAddList from "./ButtonAddList";
+import Button from "./Button";
 
 function Header() {
-  const { showFormAddList } = useTasks();
+  const { showFormAddList, setShowFormAddList } = useTasks();
+
+  function handleShowFormAddList() {
+    setShowFormAddList((open) => !open);
+  }
 
   return (
     <div className={styles.header}>
@@ -13,7 +17,11 @@ function Header() {
 
       {showFormAddList && <FormAddList />}
 
-      {!showFormAddList && <ButtonAddList />}
+      {!showFormAddList && (
+        <Button onClick={handleShowFormAddList} type="new-list">
+          + New List
+        </Button>
+      )}
     </div>
   );
 }

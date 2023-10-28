@@ -1,6 +1,8 @@
+import { TaksProvider } from "./contexts/tasksContext";
 import Header from "./components/Header";
 import Title from "./components/Title";
-import { TaksProvider } from "./contexts/tasksContext";
+import AddTask from "./components/AddTask";
+import Tasks from "./components/Tasks";
 
 function App() {
   return (
@@ -8,8 +10,8 @@ function App() {
       <TaksProvider>
         <Title />
         <Header />
-        {/* <Tasks />
-        <AddTaks /> */}
+        <Tasks />
+        <AddTask />
       </TaksProvider>
     </div>
   );
