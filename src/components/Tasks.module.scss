@@ -1,0 +1,30 @@
+.tasks-container {
+  position: relative;
+}
+
+.tasks {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-content: flex-start;
+  border-radius: 8px;
+  padding: 2rem;
+
+  .task {
+    padding: 1rem;
+    white-space: nowrap;
+    color: #17334a;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: #555;
+    font-weight: 400;
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: var(--color-primary-light-3);
+    }
+  }
+}

@@ -1,0 +1,31 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow-x: auto;
+  padding-bottom: 1.2rem;
+  border-bottom: 2px solid var(--color-primary-light-4);
+  padding: 0.8rem;
+}
+
+.task-lists {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+
+  .task-list {
+    background-color: var(--color-primary-light-4);
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.05);
+    border-radius: 6px;
+    padding: 0.8rem 1.2rem;
+    transition: all 0.3s;
+
+    &-active {
+      background-color: var(--color-primary-light-3);
+    }
+
+    &:hover {
+      background-color: var(--color-primary-light-3);
+    }
+  }
+}
