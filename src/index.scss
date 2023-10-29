@@ -21,6 +21,12 @@
   --shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
 }
 
+$bp-largest: 75em; //1200px
+$bp-large: 68.75em; //1100px
+$bp-medium: 56.25em; //900px
+$bp-small: 37.5em; //600px
+$bp-smallest: 31.25em; //500px
+
 * {
   padding: 0;
   margin: 0;
@@ -30,6 +36,18 @@
 html {
   font-size: 62.5%;
   box-sizing: border-box;
+
+  @media only screen and (max-width: $bp-large) {
+    font-size: 50%;
+  }
+
+  @media only screen and (max-width: $bp-large) {
+    font-size: 56.25%;
+  }
+
+  @media only screen and (max-width: $bp-medium) {
+    font-size: 50%;
+  }
 }
 
 body {
@@ -42,9 +60,11 @@ body {
 }
 
 .container {
-  height: 70vh;
-  width: 50%;
-  margin: 8rem auto;
+  height: 80vh;
+  // width: 50%;
+  width: clamp(75rem, 80%, 90rem);
+  // max-width: 75rem;
+  margin: 5rem auto;
   border: 2px solid var(--color-primary-light-2);
   padding: 2rem;
   box-shadow: 0 1.5rem 2.5rem rgba(0, 0, 0, 0.1);
@@ -58,4 +78,13 @@ body {
 
   display: grid;
   grid-template-rows: auto auto 1fr auto;
+
+  // @media only screen and (max-width: $bp-largest) {
+  //   width: 75%;
+  //   height: 75vh;
+  // }
+
+  @media only screen and (max-width: $bp-small) {
+    width: 80%;
+  }
 }
