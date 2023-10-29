@@ -1,0 +1,11 @@
+.message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 1px;
+
+  .span {
+    font-size: 2rem;
+    margin-right: 10rem;
+  }
+}

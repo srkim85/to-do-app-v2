@@ -1,5 +1,6 @@
 import styles from "./Tasks.module.scss";
 import { useTasks } from "../contexts/tasksContext";
+import Message from "./Message";
 
 function Tasks() {
   const {
@@ -13,6 +14,8 @@ function Tasks() {
   const selectedArr = tasks.filter(
     (task) => task.taskList === selectedUserList
   );
+
+  if (tasks.length === 0) return <Message />;
 
   return (
     <div className={styles["tasks-container"]}>
