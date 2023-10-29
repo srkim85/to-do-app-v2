@@ -24,6 +24,7 @@
 $bp-largest: 75em; //1200px
 $bp-large: 68.75em; //1100px
 $bp-medium: 56.25em; //900px
+$bp-medium2: 43.75em; //700px
 $bp-small: 37.5em; //600px
 $bp-smallest: 31.25em; //500px
 
@@ -79,12 +80,7 @@ body {
   display: grid;
   grid-template-rows: auto auto 1fr auto;
 
-  // @media only screen and (max-width: $bp-largest) {
-  //   width: 75%;
-  //   height: 75vh;
-  // }
-
-  @media only screen and (max-width: $bp-small) {
-    width: 80%;
+  @media only screen and (max-width: $bp-medium2) {
+    width: 90%;
   }
 }

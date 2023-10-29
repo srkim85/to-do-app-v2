@@ -1,3 +1,5 @@
+@import "../index.scss";
+
 :global(.form) {
   width: 70%;
   padding: 1rem;
@@ -9,12 +11,17 @@
   justify-content: space-between;
   gap: 2rem;
   background-color: var(--color-primary-light-3);
+
+  @media only screen and (max-width: $bp-medium2) {
+    width: 100%;
+  }
 }
 
-.form-add-list {
-  background-color: var(--color-primary-light-5);
-  width: 75%;
-}
+// .form-add-list {
+//   background-color: var(--color-primary-light-5);
+//   width: 75%;
+
+// }
 
 :global(.input) {
   padding: 0.6rem 1.2rem;
