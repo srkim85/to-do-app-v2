@@ -21,6 +21,7 @@ function TaksProvider({ children }) {
   }
 
   function handleDeleteTask(task) {
+    console.log("srki");
     setTasks((tasks) => tasks.filter((t) => t !== task));
   }
 

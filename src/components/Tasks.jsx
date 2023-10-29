@@ -32,7 +32,10 @@ function Tasks() {
             >
               {task.taskName}
             </span>
-            <span className={styles["delete-task"]} onClick={handleDeleteTask}>
+            <span
+              className={styles["delete-task"]}
+              onClick={() => handleDeleteTask(task)}
+            >
               ❌
             </span>
           </li>
