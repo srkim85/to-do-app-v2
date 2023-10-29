@@ -15,7 +15,7 @@ function Tasks() {
   );
 
   return (
-    <div className={styles["task-container"]}>
+    <div className={styles["tasks-container"]}>
       <ul className={styles.tasks}>
         {selectedArr.map((task) => (
           <li key={task.taskName} className={styles.task}>
@@ -29,11 +29,18 @@ function Tasks() {
             >
               {task.taskName}
             </span>
+            <span className={styles["delete-task"]} onClick={handleDeleteTask}>
+              ❌
+            </span>
           </li>
         ))}
       </ul>
 
-      {selectedUserList !== 0 && (<span onClick={handleDeleteList}>❌</span>)()}
+      {selectedUserList !== 0 && (
+        <span className={styles["delete-list"]} onClick={handleDeleteList}>
+          ⛔
+        </span>
+      )}
     </div>
   );
 }

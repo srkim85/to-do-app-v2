@@ -28,3 +28,15 @@
     }
   }
 }
+
+.delete-task {
+  font-size: 1.2rem;
+}
+
+.delete-list {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  font-size: 2.5rem;
+  cursor: pointer;
+}

@@ -1,8 +1,7 @@
-import styles from "./FormAddList.module.scss";
-import Button from "./Button";
-
 import { useEffect, useRef } from "react";
 import { useTasks } from "../contexts/tasksContext";
+import styles from "./FormAddList.module.scss";
+import Button from "./Button";
 
 function FormAddList() {
   const { userLists, handleAddList, setShowFormAddList, list, setList } =
@@ -16,7 +15,7 @@ function FormAddList() {
     e.preventDefault();
     if (!list) return;
     if (isIncluded) {
-      alert("Task already added");
+      alert("List already added");
       return;
     }
 
@@ -42,10 +41,10 @@ function FormAddList() {
     >
       <input
         type="text"
-        placeholder="Type here..."
+        placeholder="Enter list name..."
         value={list}
         onChange={(e) => setList(e.target.value)}
-        className="input input-new-list"
+        className="input"
         ref={inputEl}
       />
       <Button type="add-list">+ Add list</Button>

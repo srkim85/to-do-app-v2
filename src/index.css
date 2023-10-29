@@ -42,7 +42,7 @@ body {
 }
 
 .container {
-  height: 100vh;
+  height: 70vh;
   width: 50%;
   margin: 8rem auto;
   border: 2px solid var(--color-primary-light-2);
@@ -58,5 +58,4 @@ body {
 
   display: grid;
   grid-template-rows: auto auto 1fr auto;
-  height: 100%;
 }
